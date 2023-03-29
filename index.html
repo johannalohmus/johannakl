@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav class='navbar'>
+    <h2 class='nav home' data-scroll='home'><a href=#home class='link home active'>home</a></h2>
+    <h2 class='nav about' data-scroll='about'><a href=#about class='link about'>about</a></h2>
+    <h2 class='nav work' data-scroll='work'><a href=#work class='link work'>work</a></h2>
+    <h2 class='nav resume' data-scroll='resume'><a href=#resume class='link resume'>resume</a></h2>
+    <h2 class='nav contact' data-scroll='contact'><a href=#contact class='link contact'>contact</a></h2>
+  </nav>
+
+  <div class="container">
+    <section class="sec home" id="home">
+      <div class="home-text">
+        <h3 class="header-sub-text">hi! my name is johanna and i'm a</h3>
+        <h1 class="header-main-text">web designer</h1>
+        <img src="final.png" class="header-gif" alt="Gif" />
+      </div>
+    </section>
+
+    <section class="sec about" id="about">
+      <h1>about</h1>
+    </section>
+
+    <section class="sec work" id="work">
+      <h1>work</h1>
+    </section>
+
+
+    <section class="sec resume" id="resume">
+      <h1>resume</h1>
+    </section>
+
+    <section class="sec contact" id="contact">
+      <form class="contact-form">
+        <h3>let's get in touch!</h3>
+        <input type="text" id="name" placeholder="name" required>
+        <input type="text" id="number" placeholder="phone number">
+        <input type="email" id="email" placeholder="email" required>
+        <textarea id="message" rows="4" placeholder="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
