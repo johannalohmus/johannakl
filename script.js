@@ -1,21 +1,37 @@
+// npm start
+
+// git add .
+// git commit -m "blah"
+// git push
+
+//import * as THREE from '../node_modules/three/build/three.module.js';
+import * as THREE from 'three';
+import './style.css'
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector('#bg'),
+});
+
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.setZ(30);
+
+renderer.render(scene, camera);
+
+function animate()
+{
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+
+animate();
+
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('body nav h2 a')
-
-window.onscroll = () => {
-  section.forEach(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
-
-    if (top >= offset & top < offset + height) {
-      navLinks.forEach(links => {
-        links.classList.remove('active');
-        document.querySelector('body nav h2 a[href*=' + id + ']').classList.add('active');
-      });
-    }
-  });
-};
 
 function reveal() {
   var reveals = document.querySelectorAll("section");
